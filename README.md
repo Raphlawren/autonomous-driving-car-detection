@@ -39,6 +39,10 @@ Requires `tensorflow`, `numpy`, `pillow`, and the bundled `yad2k` module. Open t
 
 The saved notebook output for `images/test.jpg` contains 10 predicted boxes: eight cars, one bus, and one traffic light, with confidence scores from 0.36–0.89. See `out/test.jpg` above. These are model predictions from a sample image, not an accuracy or mAP evaluation. The notebook has not been rerun for this documentation update.
 
+## Evaluation plan
+
+The [evaluation plan](EVALUATION.md) specifies the labeled test split, detection metrics, error analysis, edge cases and latency measurements needed to assess this pipeline. These evaluations have not yet been run.
+
 ## Acknowledgements
 
 Built while completing DeepLearning.AI's Deep Learning Specialization (Convolutional Neural Networks course) on Coursera. `yad2k/` (Darknet-to-Keras conversion) is Allan Zelener's [YAD2K](https://github.com/allanzelener/YAD2K), used under MIT license. The pretrained YOLOv2 weights in `model_data/` come from the [official YOLO website](https://pjreddie.com/darknet/yolo/) — not trained by me. Sample images are from the [Drive.ai Sample Dataset](https://www.drive.ai/), CC BY 4.0. The four functions listed under Overview are my implementation.
