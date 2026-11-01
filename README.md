@@ -4,7 +4,7 @@ I implemented the post-processing pipeline that turns pretrained YOLOv2 predicti
 
 The saved sample produces **10 detections** covering cars, a bus, and a traffic light. This project demonstrates image inference and detection post-processing; it does not include vehicle control or an autonomous-driving system.
 
-![Predicted boxes](out/annotated.jpg)
+![Predicted boxes on the saved test image](out/test.jpg)
 
 ## My implementation
 
@@ -33,11 +33,11 @@ Given a road image, the pipeline runs it through a pretrained CNN, decodes the (
 
 ## Running it
 
-Requires `tensorflow`, `numpy`, `pillow`, and the bundled `yad2k` module. Open the notebook and run the cells in order — the pretrained model in `model_data/` is loaded directly, no training required. Run the cells under section 3 to try detection on a sample image from `images/`, or swap in your own.
+Requires `tensorflow`, `numpy`, `pillow`, and the bundled `yad2k` module. Open the notebook and run the cells in order — the pretrained model in `model_data/` is loaded directly, no training required. Use the inference section to try detection on a sample image from `images/`, or swap in your own.
 
 ## Results
 
-The saved notebook output for `images/test.jpg` contains 10 predicted boxes: eight cars, one bus, and one traffic light, with confidence scores from 0.36–0.89. See `out/annotated.jpg` above. These are model predictions from a sample image, not an accuracy or mAP evaluation. The notebook has not been rerun for this documentation update.
+The saved notebook output for `images/test.jpg` contains 10 predicted boxes: eight cars, one bus, and one traffic light, with confidence scores from 0.36–0.89. See `out/test.jpg` above. These are model predictions from a sample image, not an accuracy or mAP evaluation. The notebook has not been rerun for this documentation update.
 
 ## Acknowledgements
 
