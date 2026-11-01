@@ -1,10 +1,12 @@
-# Autonomous Driving - Car Detection (YOLO)
+# Road-Scene Object Detection with YOLOv2
 
-Object detection for autonomous driving using YOLO (You Only Look Once), built with TensorFlow/Keras. Detects and draws bounding boxes around cars, pedestrians, traffic lights, and other objects in road images.
+I implemented the post-processing pipeline that turns pretrained YOLOv2 predictions into labeled bounding boxes for road images. The project uses TensorFlow/Keras to filter low-confidence predictions, measure overlap, and suppress duplicate detections.
+
+The saved sample produces **10 detections** covering cars, a bus, and a traffic light. This project demonstrates image inference and detection post-processing; it does not include vehicle control or an autonomous-driving system.
 
 ![Predicted boxes](out/annotated.jpg)
 
-## Overview
+## My implementation
 
 This implements the core filtering and post-processing logic of the YOLO object detection pipeline on top of a pretrained YOLOv2 model:
 
@@ -35,7 +37,7 @@ Requires `tensorflow`, `numpy`, `pillow`, and the bundled `yad2k` module. Open t
 
 ## Results
 
-Running the pipeline on `images/test.jpg` correctly detects 10 objects (cars, a bus, and a traffic light) with confidence scores from 0.36–0.89 — see `out/annotated.jpg` above.
+The saved notebook output for `images/test.jpg` contains 10 predicted boxes: eight cars, one bus, and one traffic light, with confidence scores from 0.36–0.89. See `out/annotated.jpg` above. These are model predictions from a sample image, not an accuracy or mAP evaluation. The notebook has not been rerun for this documentation update.
 
 ## Acknowledgements
 
